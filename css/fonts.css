@@ -1,0 +1,80 @@
+/* font */
+b,strong{
+	font-weight: bold;
+}
+small{
+	font-size: 14px;
+	line-height: 17px;
+}
+
+/* headings */
+h1,h2,h3,h4{
+	font-weight: normal;
+	margin-top: 10px;
+	margin-bottom: 15px;	
+}
+h1,.h1{
+	font-size: 40px;
+	line-height: 49px;
+}
+h2,h3,
+.h2,.h3{
+	font-weight: bold;
+	font-size: 30px;
+	line-height: 37px;
+}
+h3,.h3{
+	font-weight: normal;
+}
+h4,.h4{
+	font-size: 20px;
+	line-height: 24px;	
+}
+
+a{
+	cursor: pointer;
+	color: var(--color-1);
+	text-decoration: none;
+	border-bottom: 1px solid transparent;
+}
+a:hover{
+	border-bottom: 1px solid;
+}
+p:last-child{
+	margin-bottom: 0;
+}
+/*.subtitle_link{
+	display: inline-block;
+	color: var(--color-1);
+}
+.subtitle_link:hover{
+	border-bottom: 1px solid;
+}*/
+.callback{
+	border-bottom: 2px dotted;
+	text-align: center;
+}
+	.header_block  .callback:hover{
+		color: var(--color-1);
+		border-bottom-style: solid;
+	}
+	.header_block  .callback:active{
+		border-color: transparent;
+	}
+.consult{
+	padding: 0 9px;
+	padding-top: 3px;
+	padding-bottom: 5px;
+
+	background-color: var(--color-3);
+
+	text-align: center;
+}
+.consult:hover{
+	color: #fff;
+	background-color: var(--color-1);
+}
+.consult:active{
+	color: #fff;
+	background-color: var(--color-4);
+}

@@ -1,0 +1,546 @@
+:root{
+
+	--color-1: #346DF6;
+	--color-2: rgba(52, 109, 246, 0.85);
+	--color-3: #D7E9FE;
+	--color-4: #0F4CE0;
+	--color-5: #005197;
+	--color-6: #E5E9ED;
+	--color-7: #9C9FA2;
+	--color-8: #81A2EF;
+	--color-9: #E28E9C;
+	--color-10: #F33555;
+	--color-11: #F2F4F6;
+
+
+	/* темная цвета */
+	--dark-color-1: #2C2E3A;
+	--dark-color-2: rgba(44, 46, 58, 0.85);
+	--dark-color-3: #000;
+}
+
+/* страница gui */
+.gui_row{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin-bottom: 50px;
+}
+.buttons_block{
+	min-width: 300px;
+	margin: 0 5px;
+}
+.gui_row > *,
+.gui_row form > div > *{
+	margin-bottom: 10px;
+}
+.gui_row > *:last-child,
+.gui_row form > div > *:last-child{
+	margin-bottom: 0;
+}
+.gui_row form{
+	display: flex;
+}
+.icons{
+	display: flex;
+}
+	.icons > *{
+		margin: 0 5px;
+	}
+
+hr{
+	height: 0;
+	border: 1px solid var(--color-6);
+}
+
+/* кнопка */
+.button{
+	max-width: 300px;
+	width: 100%;
+	vertical-align: middle;
+
+	cursor: pointer;
+
+	display: inline-block;
+
+	font-size: 18px !important;
+	font-weight: normal;
+	color: #fff;
+	line-height: 60px !important;
+	text-align: center;
+	text-decoration: none;	
+
+	border: 0;
+	background-color: var(--color-1);
+}
+.button:hover{
+	background-color: var(--color-2);
+	border-color: var(--color-2);
+}
+.button:active{
+	background-color: var(--color-4);
+}
+.disabled{
+	pointer-events: none;
+	opacity: .5;
+}
+
+
+/* пустая кнопка с границами */
+.button_bordered{
+	line-height: 56px !important;
+	background-color: transparent !important;
+	color: var(--color-1);
+	border: 2px solid  var(--color-1) !important;
+}
+.button_bordered:hover{
+	color: var(--color-2);
+	border: 2px solid  var(--color-2) !important;
+}
+.button_bordered:active{
+	color: var(--color-5);
+	border-color: var(--color-4) !important;
+}
+
+/* темная кнопка */
+.button_dark{
+	background-color: var(--dark-color-1);
+	border-color: var(--dark-color-1) !important;
+	color: #fff;
+}
+.button_dark:hover{
+	background-color: var(--dark-color-2);
+	border-color: var(--dark-color-2) !important;
+}
+.button_dark:active{
+	background-color: var(--dark-color-3);
+	border-color: var(--dark-color-3) !important;
+}
+
+/* темная кнопка с границами */
+.button_dark.button_bordered{
+	color: var(--dark-color-1);
+	border-color: var(--dark-color-1);
+}
+.button_dark.button_bordered:hover{
+	color: var(--dark-color-2);
+	border: 2px solid  var(--dark-color-2);
+}
+.button_dark.button_bordered:active{
+	color: #000;
+	border-color: #000;
+}
+
+/* темная кнопка маленькая с границами */
+.button_small{
+	line-height: 36px;
+}
+
+/* иконки */
+.icon_item{
+
+}
+	.icon_item svg{
+		fill: #000;
+	}
+	.icon_item:hover svg{
+		fill: var(--color-1);
+	}
+	.icon_item:active svg{
+		fill: var(--color-4);
+	}
+
+.cat_icon a{
+	color: var(--dark-color-1);
+	text-decoration: none;
+
+	font-size: 17px;
+	font-weight: bold;
+	line-height: 21px;
+}
+	.cat_icon svg{
+		fill: var(--dark-color-1);
+		margin-right: 19px;
+	}
+	.cat_icon:hover a,
+	/*.cat_icon:active a,
+	.cat_icon:hover svg,
+	.cat_icon:active svg*/{
+		color: var(--color-1);
+		fill: var(--color-1);
+	}
+
+/* выпадающий список */
+.dropdown_wrap{
+	position: relative;
+}
+	.dropdown_arrow{
+		border: solid black;
+		border-width: 0 2px 2px 0;
+		display: inline-block;
+		padding: 3px;
+
+		transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
+
+		margin-left: 5px;
+	    margin-bottom: 5px;
+	}
+	.dropdown_text{
+		color: var(--dark-color-1);
+		font-size: 14px;
+		line-height: 17px;
+	}
+		.dropdown_list{
+			display: none;
+			list-style: none;
+			background: #FFFFFF;
+			box-shadow: 0px 5px 100px rgba(44, 46, 58, 0.25);
+
+			padding: 16px 0;
+			padding-left: 30px;
+			padding-right: 25px;
+			
+			min-width: max-content;
+
+			position: absolute;
+			left: -30px;
+			top: calc(100% + 7px);
+			z-index: 12;
+		}
+			.dropdown_item{
+				min-width: max-content;
+				margin-bottom: 10px;
+			}
+			.dropdown_item:last-child{
+				margin-bottom: 0;
+			}
+				.dropdown_item_link{
+					font-size: 14px;
+					;height: 17px;
+					color: inherit;
+				}
+					.dropdown_item_link:hover{
+						border-bottom: 1px solid var(--dark-color-1);
+					}
+
+/* форма */
+.form_block form{
+	background-color: var(--color-6);
+}
+
+/* ошибки для формы */
+.error{
+	color: var(--color-9);
+}
+
+
+/* элементы формы */
+input,
+textarea{
+	background-color: transparent;
+}
+textarea{
+	/*resize: none;*/
+	min-height: 100px;
+	max-height: 150px;
+	height: 100%;
+	max-width: 100%;
+	min-width: 100%;
+}
+
+input.error{
+	border-bottom-color: var(--color-10) !important;
+}
+label.error{
+    color: var(--color-10);
+    position: absolute;
+    right: 0;
+    top: 15px;
+}
+label.error+.input_placeholder span span{
+	color: var(--color-10);
+}
+
+input:focus,
+button:focus{
+	outline: none;
+}
+input:not([type=number]),
+textarea{
+	padding: 15px 0;
+	border: 0;
+	border-bottom: 2px solid;
+
+	font-size: 18px;
+	line-height: 22px;
+	color: var(--dark-color-1);
+}
+input:not([type=number])::placeholder,
+textarea::placeholder{
+	color: var(--dark-color-1);
+}
+
+input[type="number"] {
+	-webkit-appearance: textfield;
+	-moz-appearance: textfield;
+	appearance: textfield;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+	-webkit-appearance: none;
+}
+
+.input_wrap{
+	width: 100%;
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+
+	margin-bottom: 30px;
+}
+	.input_wrap label{
+		
+	}
+	.input_wrap input:focus ~ .input_placeholder,
+	.input_wrap textarea:focus ~ .input_placeholder{
+		font-size: 12px;
+		line-height: 14px;
+    	color: gray;
+    	top: 0;
+    	left: 0;		
+	}
+	.input_wrap .input_placeholder{
+		position: absolute;
+		top: 15px;
+		pointer-events: none;
+		z-index: 1;
+		font-size: 18px;
+		line-height: 22px;
+		-webkit-transition: all 0.2s ease;
+		transition: all 0.2s ease;
+	}
+
+.input_file_wrap{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--color-11);
+}
+	.input_file_wrap p{
+		margin-right: 15px;
+	}
+	.input_file_wrap input{
+		display: none;
+	}
+	.input_file_wrap label{
+		margin-right: 50px;
+	}
+
+.input_number_wrap{
+	padding: 16px 24px;
+	display: flex;
+}
+	.input_number_decr,
+	.input_number_incr{
+		border: 0;
+		border-radius: 100%;
+		
+		background-color: var(--dark-color-1);
+		background-repeat: no-repeat;
+		background-position: center;
+		width: 24px;
+		height: 24px;
+		
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		
+		line-height: 1;
+		color: #fff;
+		text-align: center;
+	}
+	.input_number_decr{
+		background-image: url(../img/input_number_minus.svg);
+	}
+	.input_number_incr{
+		background-image: url(../img/input_number_plus.svg);
+	}
+	.input_number{
+		font-size: 18px;
+		line-height: 22px;
+		text-align: center;
+		
+		width: 74px;
+		margin: 0 5px;
+		
+		border: 0;
+	}
+	.input_number_bordered{
+		border: 2px solid var(--color-1);
+	}
+		.input_number_bordered button{
+			background-color: var(--color-1);
+		}
+		.input_number_bordered button:hover{
+			background-color: var(--color-2);
+		}
+		.input_number_bordered button:active{
+			background-color: var(--color-4);
+		}
+		.input_number_bordered.disabled{
+			opacity: 1;
+		}
+			.input_number_bordered.disabled button{
+				opacity: .5;
+			}
+
+.header_search{
+	/*position: relative;*/
+}
+	.header_search .header_search_label{
+		display: flex;
+		position: relative;
+	}
+	.header_search label{
+		width: 100%;
+	}
+	.header_search input{
+		padding: 9px 0;
+		min-width: 290px;
+		width: 100%;
+	}
+	.header_search .icon_loupe{
+		position: absolute;
+		right: 0;
+		cursor: pointer;
+	}
+
+	.header_search .input_search_wrap.active{
+		position: absolute;
+		z-index: 10;
+		top: -20px;
+		right: 190px;
+		min-width: 630px;
+		width: 100%;
+		background: #FFFFFF;
+		box-shadow: 0px 5px 100px rgba(44, 46, 58, 0.25);
+		padding: 20px;
+		padding-bottom: 25px;
+		padding-right: 14px;
+		margin: 0;
+	}
+	.header_search .input_search_wrap.active label{
+		/*margin-bottom: 30px;*/
+	}
+	.header_search .input_search_wrap_list{
+		display: none;
+		margin-top: 30px;
+	}
+	/*.header_search .input_search_wrap.active .input_search_wrap_list{
+		display: block;
+	}*/
+	.header_search .input_search_wrap_list,
+	.header_search .input_search_wrap_list *{
+		margin-left: 0;
+	}
+		.header_search .search_cat_list{
+			margin-bottom: 10px;
+		}
+			.header_search .search_cat_list ul{
+				list-style: none;
+				padding: 0;
+			}
+				.search_cat_list_item{
+					margin-bottom: 20px;
+				}
+				.search_cat_list_item:last-child{
+					margin-bottom: 0;
+				}
+
+		.search_product_list{
+			margin-bottom: 15px;
+		}
+			.search_product_list_item{
+							
+			}
+				.search_product_list_item a{
+					display: flex;
+					align-items: center;
+					border: 2px solid transparent;
+					padding: 22px;
+					padding-left: 15px;
+				}
+				.search_product_list_item a:hover{
+					border-width: 2px;
+					border-color: var(--color-1) !important;
+					
+				}
+					.search_product_item_img{
+						margin-right: 15px;
+					}
+					.search_product_item_descr{
+						margin-right: 80px;
+					}
+					.search_product_item_cost{
+						min-width: max-content;
+					}
+		.search_list_more{
+
+		}
+			.header_block .search_list_more a{
+				color: var(--color-1);
+			}
+
+
+/* модалка */
+/* fancybox */
+.modal_wrap.fancybox-content{
+	padding-top: 70px;
+	padding-bottom: 80px;
+	cursor: initial !important;
+}
+
+.modal_wrap{
+	display: none;
+	max-width: 800px !important;
+	width: 100%;
+
+	padding-top: 70px;
+	padding-bottom: 80px;
+}
+	.modal_header{
+
+	}
+	.modal_body{
+
+	}
+		.fancybox-button{
+			background: url(../img/modal_close.svg) no-repeat center !important;
+			top: 30px !important;
+			right: 30px !important;
+		}
+		.fancybox-button svg{
+			display: none !important;
+		}
+		.modal_form{
+			max-width: 590px;
+			margin: 0 auto;
+		}
+		.modal_form .form_confid{
+			padding-top: 15px;
+		}
+			.modal_form .form_confid p{
+				margin-bottom: 35px;
+			}
+
+@media(max-width: 767px){
+	.modal_wrap.fancybox-content{
+		padding: 30px 15px;
+	}
+	.fancybox-button{
+		top: 10px !important;
+    	right: 10 !important;
+	}
+}
